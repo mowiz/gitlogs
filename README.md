@@ -39,3 +39,28 @@ local   file:.git/config        core.symlinks=false
 local   file:.git/config        core.ignorecase=true
 local   file:.git/config        user.email=me@perit.se
 
+=== Local LOG-config
+
+'''
+$ cat >> .git/config
+
+## From https://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date
+## Via https://gist.github.com/andsens/3ba598d829e948e1bf816e2c4cd5f282
+
+[log]
+  date = relative
+[format]
+  pretty = shortlog
+[pretty]
+  shortlog = format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+'''
+
+ger 
+
+'''
+$ git log
+5d09027 N 9 minutes .. unknownAdded doc on giconfig places in README HEAD -> master
+2957e10 N 26 minutes.. unknownAdded author/email (git & README)
+512a61e N 27 minutes.. unknownInitial README
+'''
+
