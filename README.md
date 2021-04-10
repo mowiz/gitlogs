@@ -16,6 +16,7 @@ local   file:.git/config        user.email me@perit.se
 
 Hela listan, multipla platser
 
+```
 $ git config --show-scope --show-origin --list
 system  file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
 system  file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
@@ -38,10 +39,11 @@ local   file:.git/config        core.logallrefupdates=true
 local   file:.git/config        core.symlinks=false
 local   file:.git/config        core.ignorecase=true
 local   file:.git/config        user.email=me@perit.se
+```
 
 === Local LOG-config
 
-'''
+```
 $ cat >> .git/config
 
 ## From https://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date
@@ -53,14 +55,14 @@ $ cat >> .git/config
   pretty = shortlog
 [pretty]
   shortlog = format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
-'''
+```
 
 ger 
 
-'''
-$ git log
-5d09027 N 9 minutes .. unknownAdded doc on giconfig places in README HEAD -> master
-2957e10 N 26 minutes.. unknownAdded author/email (git & README)
-512a61e N 27 minutes.. unknownInitial README
-'''
+    $ git log
+    5d09027 N 9 minutes .. unknownAdded doc on giconfig places in README HEAD -> master
+    2957e10 N 26 minutes.. unknownAdded author/email (git & README)
+    512a61e N 27 minutes.. unknownInitial README
+
+(fast med färg)
 
